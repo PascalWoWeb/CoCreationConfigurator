@@ -1,8 +1,15 @@
+'use client'
+
 import Navbar from "../components/Navbar";
 import "../css/webtool.css"
 import Image from "next/image";
+import { useRouter } from 'next/navigation'
+
+
 
 const Webapplikation = () => {
+
+  const router = useRouter();
   return (
     <>
       <Navbar />
@@ -15,10 +22,10 @@ const Webapplikation = () => {
           Mit unserem Co-Creation Webtool können sie ihren
           Co-Creation Prozess ohne jegliches Vorwissen planen.
           </p>
-          <button className="app-start">Jetzt Starten</button>
+          <button className="app-start" onClick={() => router.push('/webapplikation/frage-1')}>Jetzt Starten</button>
           </div>
           <div className="grid2">
-            <Image src="/images/deutschland-trikot-wm-600.jpg" width={705} height={400} alt="cocreation-webapp"/>
+            <Image src="/images/webappmeeting.svg" width={705} height={400} alt="cocreation-webapp"/>
 
           </div>
         </section>

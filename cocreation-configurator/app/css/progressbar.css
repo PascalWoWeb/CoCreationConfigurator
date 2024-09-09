@@ -1,0 +1,23 @@
+.progressbar_container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.outer_progressbar{
+height: 20px;
+width: 60%;
+border:1px solid #707070;
+margin-top: 10%;
+display: flex;
+border-radius: 20px;
+ 
+ 
+}
+
+.inner_progressbar{
+
+    background-color: #4E65D9;
+    border-radius: 20px;
+ 
+}

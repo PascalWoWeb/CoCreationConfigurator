@@ -1,0 +1,32 @@
+.page{
+    min-height: 100vh;
+}
+
+.summary{
+    margin-top: 10%;
+    display: grid;
+    justify-content: center;
+}
+
+.h1_evaluation{
+    color: #4e65d9;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 5%;
+ }
+
+ .download-button {
+    background-color: #4e65d9;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    color: white;
+  
+    border-radius: 20px;
+  }
+
+  .download-button:hover {
+    background-color: #252e5c;
+ 
+  }
