@@ -5,7 +5,7 @@ import "./globals.css";
  
 
 const roboto = Roboto({
-  weight: ['100','300','400','500','700'],
+  weight: ['100','300','400','500','700','900'],
   subsets: ['latin'],
   variable: '--font-roboto',
 })
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body className={roboto.className}>{children}</body>
     </html>
   );

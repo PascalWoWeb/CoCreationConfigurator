@@ -6,6 +6,8 @@ export interface designmethodstype {
   difficulty: string;
   manual: string[];
   time: string;
+  online: boolean;
+  software ?: string[];
 }
 
 export const desingmethodsarray: designmethodstype[] = [
@@ -24,6 +26,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Schreibutensilien", "Papier", "Post-ist"],
     time: "60 Minuten",
+    online: false,
   },
   {
     projectphase: "understand",
@@ -38,6 +41,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Kamera"],
     time: " 2 – 7 Tage",
+    online: false,
   },
   {
     projectphase: "understand",
@@ -51,6 +55,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["keine"],
     time: "durch den gesamten Prozess",
+    online: false,
   },
   {
     projectphase: "understand",
@@ -65,11 +70,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier"],
     time: "15 Minuten",
+    online: false,
   },
   {
     projectphase: "understand",
     name: "Interview",
     difficulty: "mittel",
+    software: ["Microsoft Teams", "Zoom"],
     description:
       "Bei dieser Methode werden tiefere Einblicke in die Erfahrungen und Bedürfnisse der befragten Person ermöglicht, wodurch ein tieferes Verständnis zur Person aufgebaut werden kann.",
     manual: [
@@ -80,11 +87,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: [""],
     time: "60-90 Minuten",
+    online: true,
   },
   {
     projectphase: "understand",
     name: "Group Interviews",
     difficulty: "mittel",
+    software: ["Microsoft Teams", "Zoom"],
     description:
       "Bei dieser Methode werden tiefere Einblicke in die Erfahrungen und Bedürfnisse der befragten Person ermöglicht, wodurch ein tieferes Verständnis zur Person aufgebaut werden kann.",
     manual: [
@@ -95,11 +104,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Kamera"],
     time: "90-120 Minuten",
+    online: true,
   },
   {
     projectphase: "understand",
     name: "Experten Interviews",
     difficulty: "mittel",
+    software: ["Microsoft Teams", "Zoom"],
     description:
       "Bei dieser Methode werden tiefere Einblicke in die Erfahrungen und Bedürfnisse eines Experten eines Fachgebiets gewonnen, wodurch neue Perspektiven und Innovationen gewonnen werden können.",
     manual: [
@@ -109,11 +120,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Kamera", "Notebook"],
     time: "60-90 Minuten",
+    online: true,
   },
   {
     projectphase: "understand",
     name: "Converstation Starters",
     difficulty: "mittel",
+    software: ["Microsoft Teams", "Zoom"],
     description:
       "Bei dieser Methode werden Conversation Starters genutzt, um durch Provokationen Konversationen zu starten. Hierbei werden Begriffe in verbindung zu einem Thema gebracht, um die Kreativität der Zielgruppe anzuregen. Durch die Provokation werden verschiedene Meinungen und Einblicke ermöglicht.",
     manual: [
@@ -124,6 +137,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Kamera", "Notebook"],
     time: "30-60 Minuten",
+    online: true,
   },
   {
     projectphase: "understand",
@@ -139,6 +153,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Kamera"],
     time: "30-60 Minuten",
+    online: false,
   },
   {
     projectphase: "understand",
@@ -154,11 +169,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Karten mit Wörtern oder Bildern"],
     time: "30 Minuten",
+    online: false,
   },
   {
     projectphase: "understand",
     name: "Kollage",
     difficulty: "einfach",
+    software: ["Figma", "Adobe XD"],
     description:
       "Beschreibung: Bei dieser Methode werden die Bedürfnisse der Teilnehmer erforscht, da dies den kreativen Denkprozess dieser herausfordert.",
     manual: [
@@ -168,6 +185,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Kleber", "Magazine"],
     time: "30-60 Minuten",
+    online: true,
   },
   {
     projectphase: "understand",
@@ -182,11 +200,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Kamera"],
     time: "2-4 Stunden",
+    online: false,
   },
   {
     projectphase: "understand",
     name: "Draw It",
     difficulty: "einfach",
+    software: ["Figma", "Adobe XD"],
     description:
       "Bei dieser Methode werden die Teilnehmer dazu aufgefordert zu einem Thema Zeichnungen zu entwerfen, wodurch die Ideen und Gedanken dieser visuell wiedergegeben wird.",
     manual: [
@@ -196,6 +216,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Kamera"],
     time: "30 Minuten",
+    online: true,
   },
   {
     projectphase: "understand",
@@ -211,6 +232,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Kamera"],
     time: "2-4 Stunden",
+    online: false,
   },
   {
     projectphase: "understand",
@@ -226,11 +248,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Hilfsmittel zum Dokumentieren"],
     time: "Idealerweise eine Woche",
+    online: false,
   },
   {
     projectphase: "define",
     name: "Personas",
     difficulty: "mittel",
+    software: ["Miro"],
     description:
       "Bei dieser Methode werden die gesammelten Daten der Teilnehmer in einem Steckbrief zusammengefasst. Hierbei steht der Steckbrief nicht für eine Person, sondern für eine Nutzergruppe.",
     manual: [
@@ -240,11 +264,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Beobachtungsdaten", "Papier", "Stift"],
     time: "halben bis ganzen Tag pro Gruppe",
+    online: true,
   },
   {
     projectphase: "define",
     name: "Storyboard",
     difficulty: "einfach",
+    software: ["Miro"],
     description:
       "Bei dieser Methode werden Elemente eines Produkts oder eine Dienstleistung, welche in groben Skizzen dargestellt werden. Dies dient als Leitfaden für Konzepte.",
     manual: [
@@ -256,11 +282,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Papier", "Stift"],
     time: "60 Minuten",
+    online: true,
   },
   {
     projectphase: "define",
     name: "User Journey Map",
     difficulty: "hart",
+    software: ["Miro"],
     description:
       "Bei dieser Methode werden die Schritte und Interaktion zwischen einen Benutzer und eines Produkts oder einer Dienstleistung über die Zeit grafisch dargestellt. Dort werden in verschiedenen Phasen die Ziele. Aktivitäten, Berührungspunkte, Frustpunkte, Verbesserungsmöglichkeiten und Emotionen, Gedanken und Wünsche dargestellt.",
     manual: [
@@ -274,11 +302,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Papier", "Stift", "Beobachtungsdaten"],
     time: "2 Stunden",
+    online: true,
   },
   {
     projectphase: "create",
     name: "6-3-5 Methode",
     difficulty: "einfach",
+    software: ["Miro"],
     description:
       "Bei dieser Methode werden von sechs Personen eine hohe Anzahl an Lösungen für die Problemlösung erstellt. In diesem Verfahren werden drei Ansätze vorgegeben, welche in Fünf Wiederholungen erweitert werden.",
     manual: [
@@ -288,6 +318,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["leere Tabellen"],
     time: "20-30 Minuten",
+    online: true,
   },
   {
     projectphase: "create",
@@ -303,11 +334,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Whiteboard","Videokamera"],
     time: "1-3 Stunden",
+    online: false,
   },
   {
     projectphase: "create",
     name: "Brainstorming",
     difficulty: "einfach",
+    software: ["Miro"],
     description:
       "Bei dieser Methode werden viele Ideen des Teams gesammelt, welche sich auf die zentrale Frage bezieht.",
     manual: [
@@ -318,11 +351,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Whiteboard","Stifte","Post-its"],
     time: "1-3 Stunden",
+    online: true,
   },
   {
     projectphase: "create",
     name: "Dotmocracy",
     difficulty: "einfach",
+    software: ["Miro"],
     description:
       "Bei dieser Methode werden Ergebnisse aus der Brainstorming Phase innerhalb der Gruppe demokratisch bewertet.",
     manual: [
@@ -333,11 +368,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Stifte", "Papier", "Klebepunkte", "Stellwände", "Nadeln oder Magnete"],
     time: "10-30 Minuten",
+    online: true,
   },
   {
     projectphase: "create",
     name: "How-Wow-Now Matrix",
     difficulty: "einfach",
+    software: ["Miro"],
     description:
       "Bei dieser Methode werden gesammelte Ideen in einer Bewertungsmatrix, welche nach der Originalität und Umsetzbarkeit eingeteilt sind bewertet.",
     manual: [
@@ -350,11 +387,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Flipchart", "Marker", "Klebezettel"],
     time: "10-40 Minuten",
+    online: true,
   },
   {
     projectphase: "create",
     name: "Ja, außerdem ...",
     difficulty: "einfach",
+    software: ["Miro"],
     description:
       "Bei dieser Methode handelt es sich um eine Art des Brainstormings, welches strukturierter ist, da nach jeder Idee ein „Ja außerdem…“ folgt, um die Idee weiter auszubauen.",
     manual: [
@@ -365,11 +404,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Whiteboard"],
     time: "15-60 Minuten",
+    online: true,
   },
   {
     projectphase: "create",
     name: "Mindmapping",
     difficulty: "einfach",
+    software: ["Miro"],
     description:
       "Bei dieser Methode wird ein Zentraler Begriff oder Frage in die Mitte platziert, woraufhin sich drum herum weitere Ideen mit Zwischenideen entwickeln, welche erforscht werden können.",
     manual: [
@@ -379,11 +420,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Whiteboard", "Papier","Stift"],
     time: "10-60 Minuten",
+    online: true,
   },
   {
     projectphase: "design",
     name: "High-Fidelity-Prototypen",
     difficulty: "hart",
+    software: ["Figma", "Adobe XD"],
     description:
     "Bei dieser Methode werden sehr detaillierte Prototypen erstellt, welche klickbar sind und auf Benutzerinteraktionen reagieren (clickdummies oder mockups). In dem Prototypen befinden sich bereits geeignete Bilder und Texte.",
     manual: [
@@ -393,6 +436,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Prototyping Tools wie Figma oder Adobe XD"],
     time: "15-60 Minuten",
+    online: true,
   },
   {
     projectphase: "design",
@@ -407,6 +451,24 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Papier", "Stift",],
     time: "1-24 Stunden",
+    online: false,
+  },
+  {
+    projectphase: "design",
+    name: "Lego Serious Play",
+    difficulty: "einfach",
+    description:
+    "Diese Methode ist ein spielerischer Prozess, wo zu Visionen kreativ und schnell Prototypen erstellt werden können. Der Vorteil hierbei, dass sich komplett auf die Ideengenerierung fokussiert werden kann und die Technik außen vorgelassen wird.",
+    manual: [
+      "Teilen sie Kisten mit Lego unter den Teilnehmern aus.",
+      "Ermutigen sie die Teilnehmer ihre Ideen und Visionen zu im Bezug auf die zentrale Frage zu realisieren.",
+      "Erklären sie den Teilnehmern, dass es beim Denken innerhalb dieses Prozesses kein richtig und falsch gibt.",
+      "Anschließend werden die Antworten der Teilnehmer besprochen.",
+      "Zuletzt wird aus allen Antworten der Teilnehmer ein gemeinsames Projekt gebaut.",
+    ],
+    materials: ["Lego",],
+    time: "variable",
+    online: false,
   },
   {
     projectphase: "design",
@@ -422,6 +484,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Papier", "Stift", "Schere und Kleber"],
     time: "1-24 Stunden",
+    online: false,
   },
   {
     projectphase: "design",
@@ -437,11 +500,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Computer", "Stift und Papier"],
     time: "variiert nach Anwendung",
+    online: true,
   },
   {
     projectphase: "design",
     name: "Wireframe",
     difficulty: "mittel",
+    software: ["Figma", "Adobe XD"],
     description:
     "Bei dieser Methode werden Layouts für die Anwendung erstellt ohne, dass die Elemente bereits gestaltet sein müssen. Der Fokus liegt hier zu bestimmt, ob alle nötigen Informationen und Funktionen vorhanden sind und ob das Layout von der Stimmung passt.",
     manual: [
@@ -452,6 +517,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Prototyping Tools oder Stift und Papier"],
     time: "variiert nach Anwendung",
+    online: true,
   },
   {
     projectphase: "evaluation",
@@ -467,6 +533,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Foto/Videokamera", "Tonaufnahmegerät", "Screencast Software"],
     time: "mindestens 24 Stunden",
+    online: false,
   },
   {
     projectphase: "evaluation",
@@ -487,11 +554,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Foto/Videokamera", "Tonaufnahmegerät", "Fragebögen"],
     time: "5 Personentage",
+    online: false,
   },
   {
     projectphase: "evaluation",
     name: "Fragebogen",
     difficulty: "mittel",
+    software: ["Google Forms"],
     description:
     "Bei dieser Methode werden Nutzermeinungen durch Fragebögen erfasst werden. Hierbei kann es sich um qualitativen und/oder quantitativen Daten handeln. Durch diese Methode können Usability-Probleme und Erfahrungen der befragten Personen gesammelt werden.",
     manual: [
@@ -504,6 +573,7 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Fragebogen"],
     time: "1-2 Personentage",
+    online: true,
   },
   {
     projectphase: "evaluation",
@@ -521,11 +591,13 @@ export const desingmethodsarray: designmethodstype[] = [
     ],
     materials: ["Vorlagen für Heuristische Evaluationen"],
     time: "mindestens einen Personentag",
+    online: false,
   },
   {
     projectphase: "evaluation",
     name: "Usability Test",
     difficulty: "hart",
+    software: ["Maze"],
     description:
     "Bei dieser Methode werden fertige Produkte oder Prototypen von realen Anwendern, welche dem späteren Endanwender entsprechen, getestet. Das zu entwickelndes Endprodukt muss hierbei nicht vollständig ausgereift sein.",
     manual: [
@@ -535,11 +607,12 @@ export const desingmethodsarray: designmethodstype[] = [
       "Beim Test begrüßt der Moderator die Nutzer und führt ein Briefing durch, wo die Nutzer Instruktionen zum System erhalten.",
       "Die Nutzer denken während des Tests laut, damit der Moderator die Gedanken dokumentieren und nachvollziehen kann.",
       "Die Daten werden durch Videoaufzeichnungen oder Beobachtungsbögen dokumentiert.",
-      "Nach dem Feldtest werden die gesammelten Daten ausgewertet und die Dokumentation erstellt.",
+      "Nach dem Usability-Test werden die gesammelten Daten ausgewertet und die Dokumentation erstellt.",
       
     ],
     materials: ["Vorlagen für Heuristische Evaluationen"],
     time: "5 Personentage",
+    online: true,
   },
 ];
 

@@ -1,6 +1,104 @@
-.outer_container{
-    height: 80px;
+.outer_container {
+    height: 70px;
     width: 900px;
     border: 1px solid black;
+    margin-bottom: 5%;
+    
+ 
 
 }
+
+.menu_item{
+    display: flex;
+    align-items: center;
+    height: inherit;
+    margin-left: 1%;
+    
+ 
+}
+
+.menu_item_text{
+    color: #4e65d9;
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 1%;
+
+}
+
+.triangle{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.triangle.open{
+    transition: 0.2s ease-in-out;
+    transform: rotate(-90deg);
+}
+ 
+
+.inner_container{
+
+    height: fit-content;
+    width: 900px;
+    border: 1px solid black;
+    border-top: 0px;
+    padding-bottom: 3%;
+    margin-top: -5%;
+    margin-bottom: 5%;
+ 
+ 
+ 
+ 
+ 
+}
+
+.info_container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.info_container>p{
+    margin-top: 3%;
+}
+
+.description{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.instructions{
+    list-style-image: url(../../public/images/ellipse.svg);
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.instruction_title{
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #4e65d9;
+    font-weight: 600;
+}
+
+.instructions>li{
+    margin-bottom: 2%;
+}
+
+.title{
+    color: #4e65d9;
+    font-weight: 600;
+    display: inline-flex;
+    font-size: 17px;
+}
+
+.inner_container.hide{
+    display: none;
+ 
+ 
+}
+
+ 
