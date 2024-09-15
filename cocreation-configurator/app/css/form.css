@@ -1,5 +1,5 @@
 .page {
-  min-height: 100vh;
+height: 100%;
  
 }
 
@@ -96,7 +96,7 @@ h2 {
    }
 
    .form-question {
- 
+      margin-top: 20%;
       justify-content: center;
       margin-left:5%;
       margin-right:5%;
@@ -130,7 +130,7 @@ h2 {
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      margin-right: 10px;
+      margin-right: 20px ;
       font-size: 20px;
       color: #707070;
     }
@@ -156,14 +156,266 @@ h2 {
     }
 }
 @media only screen and (min-width: 375px) and (max-width: 424px) {
+  
+  button{
+    margin-top: 50%;
+ }
+
+ .form-question {
+    margin-top: 20%;
+    justify-content: center;
+    margin-left:5%;
+    margin-right:5%;
+  }
+
+  .question_button.left {
+    position: absolute;
+    left: 10%;
+  }
+
+  .question_button.right {
+    position: absolute;
+    right: 10%;
+  }
+
+  .questions {
+    display: grid;
+    gap: 10%;
+  }
+
+  .h1_question {
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  h2 {
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .radio_container {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px ;
+    font-size: 20px;
+    color: #707070;
+  }
+
+  .old_radioinput {
+    display: none;
+  }
+
+  .custom_radio {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+  }
+
+  .custom_radio::after {
+    content: "";
+    border-radius: 50%;
+    scale: 0;
+  }
 }
 
 @media only screen and (min-width: 425px) and (max-width: 767px) {
+  
+  button{
+    margin-top: 50%;
+ }
+
+ .form-question {
+    margin-top: 20%;
+    justify-content: center;
+    margin-left:5%;
+    margin-right:5%;
+  }
+
+  .question_button.left {
+    position: absolute;
+    left: 10%;
+  }
+
+  .question_button.right {
+    position: absolute;
+    right: 10%;
+  }
+
+  .questions {
+    display: grid;
+    gap: 10%;
+  }
+
+  .h1_question {
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  h2 {
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .radio_container {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px ;
+    font-size: 20px;
+    color: #707070;
+  }
+
+  .old_radioinput {
+    display: none;
+  }
+
+  .custom_radio {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+  }
+
+  .custom_radio::after {
+    content: "";
+    border-radius: 50%;
+    scale: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  
+  button{
+    margin-top: 30%;
+ }
+
+ .form-question {
+    margin-top: 5%;
+    justify-content: center;
+    margin-left:5%;
+    margin-right:5%;
+  }
+
+  .question_button.left {
+    position: absolute;
+    left: 10%;
+  }
+
+  .question_button.right {
+    position: absolute;
+    right: 10%;
+  }
+
+  .questions {
+    display: grid;
+    gap: 10%;
+  }
+
+  .h1_question {
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  h2 {
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .radio_container {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px ;
+    font-size: 20px;
+    color: #707070;
+  }
+
+  .old_radioinput {
+    display: none;
+  }
+
+  .custom_radio {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+  }
+
+  .custom_radio::after {
+    content: "";
+    border-radius: 50%;
+    scale: 0;
+  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+
+  button{
+    margin-top: 10%;
+ }
+  .form-question {
+    margin-bottom: 10%;
+  }
+
+  .question_button.left {
+    position: absolute;
+    left: 20%;
+  }
+
+  .question_button.right {
+    position: absolute;
+    right: 20%;
+  }
+
+  .questions {
+    display: grid;
+    gap: 10%;
+  }
+
+  .h1_question {
+    margin-bottom: 10%;
+  }
+  h2 {
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .radio_container {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #707070;
+  }
+
+  .old_radioinput {
+    display: none;
+  }
+
+  .custom_radio {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+  }
+
+  .custom_radio::after {
+    content: "";
+    border-radius: 50%;
+    scale: 0;
+  }
 }
 @media only screen and (min-width: 1440px) and (max-width: 2560px) {
   .form-question {

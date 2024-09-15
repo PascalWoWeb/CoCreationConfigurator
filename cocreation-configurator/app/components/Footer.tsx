@@ -1,25 +1,21 @@
 "use client";
 import React, { useState, useEffect, use } from "react";
 import Link from "next/link";
-import "../css/header.css";
 import "../css/footer.css";
 
 const Footer = () => {
-  const minwidth = window.innerWidth >= 768;
-  const [mobileMenuSize, setmobileMenuSize] = useState(
-    minwidth
-  );
- 
+  const [mobileMenuSize, setMobileMenuSize] = useState(false);  
 
   useEffect(() => {
-    const resizemenu = () => {
-      setmobileMenuSize(minwidth);
+    const updateMenuSize = () => {
+      setMobileMenuSize(window.innerWidth >= 768);
     };
 
-    window.addEventListener("resize", resizemenu);
+    updateMenuSize(); // Set initial value
+    window.addEventListener("resize", updateMenuSize);
 
     return () => {
-      window.removeEventListener("resize", resizemenu);
+      window.removeEventListener("resize", updateMenuSize);
     };
   }, []);
 

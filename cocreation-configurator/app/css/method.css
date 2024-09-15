@@ -1,15 +1,24 @@
 .method_outer {
-  width: 300px;
-  height: 300px;
+
   background-color: #4e65d9;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  z-index: 70 !important;
+ 
+ 
   position: relative;
 }
 
+.method_image {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center; 
+}
+ 
 .method_outer:hover {
   cursor: pointer;
   background-color: #7081d8;
@@ -18,23 +27,30 @@
 
 .modal_inner {
   height: fit-content;
-  width: 900px;
+  width: 70%;
   border: 1px solid black;
 
   padding-bottom: 3%;
   left: 50%;
-  z-index: 130;
+  z-index: 130 ;
   position: fixed;
  
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-40%);
   background-color: white;
+}
+
+.overlay {
+  position: fixed;
+ 
+  background-color: #324086ec;  
+  z-index: 400 !important;
 }
 .close_icon{
 display: flex;
 justify-content: space-between;
 margin-right: 5%;
 margin-left: 5%;
-margin-top: 3%;
+margin-top: 2%;
  
 }
 
@@ -43,31 +59,33 @@ margin-top: 3%;
 }
 
 .info_container {
-  display: flex;
-  justify-content: space-between;
+ 
+  /* justify-content: space-between; */
   margin-left: 5%;
   margin-right: 5%;
  
 }
 
 .info_container > p {
-  margin-top: 3%;
+  margin-top: 2%;
+  font-size: 20px !important;
 }
 
 .description {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;
+  font-size: 20px !important;
 }
 
 .instructions {
   list-style-image: url(../../public/images/ellipse.svg);
   margin-left: 5%;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .instruction_title {
-  margin-top: 3%;
+  margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;
   color: #4e65d9;
@@ -75,21 +93,198 @@ margin-top: 3%;
 }
 
 .instructions > li {
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 
 .tipp {
   margin-left: 5%;
-  margin-top: 3%;
+  margin-top: 2%;
+  font-size: 20px !important;
 }
 
 .title {
   color: #4e65d9;
   font-weight: 600;
   display: inline-flex;
-  font-size: 17px;
+ 
 }
 
 .inner_container.hide {
   display: none;
+}
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 374px){
+    
+  .method_outer{
+    width: 150px;
+    height: 150px;
+    margin-top: 10%;
+
+  }
+  .method_title{
+    font-size: 11px !important;
+  }
+
+  .modal_inner {
+    height: fit-content;
+    width: 90%;
+    position: fixed;
+    transform: translateX(-50%) translateY(-9%);
+ 
+  
+ 
+  }
+
+  li{
+    font-size: 12px;
+  }
+
+  .instructions{
+    list-style: none;
+  }
+
+ 
+}
+@media only screen and (min-width: 375px) and (max-width: 424px){
+  .method_outer{
+    width: 200px;
+    height: 200px;
+    margin-top: 10%;
+
+  }
+  .method_title{
+    font-size: 11px !important;
+  }
+
+  .modal_inner {
+    height: fit-content;
+    width: 90%;
+    position: fixed;
+    transform: translateX(-50%) translateY(-9%);
+  
+ 
+  }
+
+  li{
+    font-size: 12px;
+  }
+
+  .instructions{
+    list-style: none;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 767px){
+  .method_outer{
+    width: 200px;
+    height: 200px;
+    margin-top: 10%;
+
+  }
+  .method_title{
+    font-size: 11px !important;
+  }
+
+  .modal_inner {
+    height: fit-content;
+    width: 90%;
+    position: fixed;
+    transform: translateX(-50%) translateY(-9%);
+  
+ 
+  }
+
+  li{
+    font-size: 12px;
+  }
+
+  .instructions{
+    list-style: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+  .method_outer{
+    width: 200px;
+    height: 200px;
+    margin-top: 10%;
+
+  }
+  .method_title{
+    font-size: 11px !important;
+  }
+
+  .modal_inner {
+    height: fit-content;
+    width: 90%;
+    position: fixed;
+    transform: translateX(-50%) translateY(-15%);
+  
+ 
+  }
+
+  li{
+    font-size: 12px;
+  }
+
+  .instructions{
+    list-style: none;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+    
+  .method_outer{
+    width: 250px;
+    height: 250px;
+    margin-top: 10%;
+
+  }
+  .method_title{
+    font-size: 11px !important;
+  }
+
+  .modal_inner {
+    height: fit-content;
+    width: 90%;
+    position: fixed;
+    transform: translateX(-50%) translateY(-25%);
+  
+ 
+  }
+
+ 
+
+  .instructions{
+    list-style: none;
+ 
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 2560px){
+        
+  .method_outer{
+    width: 300px;
+    height: 300px;
+    margin-top: 10%;
+ 
+
+  }
+ 
+
+  .modal_inner {
+    height:700px;
+    width: 90%;
+    position: fixed;
+    transform: translate(-50%,-35%) ;
+    overflow: auto;
+    
+  }
+ 
+ 
+  .instructions{
+    list-style: none;
+    font-size: 20px !important;
+  }
 }

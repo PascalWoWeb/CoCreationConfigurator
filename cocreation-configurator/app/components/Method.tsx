@@ -1,7 +1,7 @@
 "use client";
 import "../css/method.css";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const Method: React.FC = (props:any) => {
@@ -9,19 +9,25 @@ const Method: React.FC = (props:any) => {
 
   const open_modal = () => {
     setOpenModal(true);
+    props.setbgtoggle(true)
     document.body.style.overflow = "hidden";
  
   };
   const close_modal = () => {
     setOpenModal(false);
+    props.setbgtoggle(false)
     document.body.style.overflow = "auto";
   };
-
+  
  
   return (
     <>
       <div className="method_outer" onClick={open_modal}>
+        <div className="method_image">
+
         <p className="method_title">{props.props.name}</p>
+        <Image src={`/images/${props.props.name}.svg`} alt={props.props.name} height={70} width={70}/>
+        </div>
       </div>
 
       {openModal && (

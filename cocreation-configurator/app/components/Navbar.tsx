@@ -6,27 +6,25 @@ import "../css/header.css";
 
 const Navbar = () => {
 
-  const minwidth = window.innerWidth >= 768;
-  const [mobileMenuSize, setmobileMenuSize] = useState(
-    minwidth
-  );
+  const [mobileMenuSize, setMobileMenuSize] = useState(false);  
   const [openMobile, setOpenMobile] = useState(false);
 
-  const toggleMenu = () => {
-    setOpenMobile(!openMobile)
-  } 
-
   useEffect(() => {
-    const resizemenu = () => {
-      setmobileMenuSize(minwidth);
+    const updateMenuSize = () => {
+      setMobileMenuSize(window.innerWidth >= 768);
     };
 
-    window.addEventListener("resize", resizemenu);
+    updateMenuSize();  
+    window.addEventListener("resize", updateMenuSize);
 
     return () => {
-      window.removeEventListener("resize", resizemenu);
+      window.removeEventListener("resize", updateMenuSize);
     };
   }, []);
+
+  const toggleMenu = () => {
+    setOpenMobile(!openMobile);
+  };
 
   return (
     <>
@@ -37,7 +35,7 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/webapplikation">Web Applikation</Link>
+              <Link href="/co-creation-konfigurator">Co-Creation Konfigurator</Link>
             </li>
             <li>
               <Link href="/methoden">Methoden</Link>
