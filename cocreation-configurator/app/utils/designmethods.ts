@@ -8,6 +8,7 @@ export interface designmethodstype {
   time: string;
   online: boolean;
   software ?: string[];
+  medicine : string;
 }
 
 export const desingmethodsarray: designmethodstype[] = [
@@ -27,6 +28,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Schreibutensilien", "Papier", "Post-ist"],
     time: "60 Minuten",
     online: false,
+    medicine:"nicht bei motorischen Einschränken geeignet",  
   },
   {
     projectphase: "understand",
@@ -42,6 +44,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Kamera"],
     time: " 2 – 7 Tage",
     online: false,
+    medicine:"ungeeignet für klinisches Personal",  
   },
   {
     projectphase: "understand",
@@ -56,6 +59,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["keine"],
     time: "durch den gesamten Prozess",
     online: false,
+    medicine:"folgt",  
   },
   {
     projectphase: "understand",
@@ -71,6 +75,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier"],
     time: "15 Minuten",
     online: false,
+    medicine:"bei motorischen Einschränkungen nur Verbal",  
   },
   {
     projectphase: "understand",
@@ -88,6 +93,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: [""],
     time: "60-90 Minuten",
     online: true,
+    medicine:"Für Personen mit wenig Zeit weniger geeignet z.B. Ärzte",  
   },
   {
     projectphase: "understand",
@@ -105,6 +111,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Kamera"],
     time: "90-120 Minuten",
     online: true,
+    medicine:"Sprachbarrieren ggf. unteinander schwierig",  
   },
   {
     projectphase: "understand",
@@ -121,6 +128,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Kamera", "Notebook"],
     time: "60-90 Minuten",
     online: true,
+    medicine:"Für Personen mit wenig Zeit weniger geeignet z.B. Ärzte", 
   },
   {
     projectphase: "understand",
@@ -138,6 +146,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Kamera", "Notebook"],
     time: "30-60 Minuten",
     online: true,
+    medicine:"Trigger vermeiden für ggf. traumatisierte Personen",  
   },
   {
     projectphase: "understand",
@@ -154,6 +163,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Kamera"],
     time: "30-60 Minuten",
     online: false,
+    medicine:"schreiben nur bei motorisch uneingeschränkten",  
   },
   {
     projectphase: "understand",
@@ -170,6 +180,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Karten mit Wörtern oder Bildern"],
     time: "30 Minuten",
     online: false,
+    medicine:"Bei motorischen Einschränkungen und Sehbehinderungen schwierig",  
   },
   {
     projectphase: "understand",
@@ -186,6 +197,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Kleber", "Magazine"],
     time: "30-60 Minuten",
     online: true,
+    medicine:"Bei motorischen Einschränkungen und Sehbehinderungen schwierig",  
   },
   {
     projectphase: "understand",
@@ -201,6 +213,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Kamera"],
     time: "2-4 Stunden",
     online: false,
+    medicine:"Beobachtete fühlen sich ggf. von zu vielen Beobachtern bedroht",  
   },
   {
     projectphase: "understand",
@@ -217,6 +230,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Kamera"],
     time: "30 Minuten",
     online: true,
+    medicine:"Bei motorischen Einschränkungen und Sehbehinderungen schwierig", 
   },
   {
     projectphase: "understand",
@@ -233,6 +247,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Kamera"],
     time: "2-4 Stunden",
     online: false,
+    medicine:"aus zeitlichen Gründen für medizinisches Personal ungeeignet",  
   },
   {
     projectphase: "understand",
@@ -249,6 +264,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Hilfsmittel zum Dokumentieren"],
     time: "Idealerweise eine Woche",
     online: false,
+    medicine:"aus zeitlichen Gründen für medizinisches Personal ungeeignet",  
   },
   {
     projectphase: "define",
@@ -265,6 +281,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Beobachtungsdaten", "Papier", "Stift"],
     time: "halben bis ganzen Tag pro Gruppe",
     online: true,
+    medicine:"Sprache",  
   },
   {
     projectphase: "define",
@@ -283,6 +300,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Papier", "Stift"],
     time: "60 Minuten",
     online: true,
+    medicine:"Bei motorischen und sprachlichen Einschränkungen schwierig",  
   },
   {
     projectphase: "define",
@@ -303,6 +321,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Papier", "Stift", "Beobachtungsdaten"],
     time: "2 Stunden",
     online: true,
+    medicine:"Bei motorischen und sprachlichen Einschränkungen schwierig",  
   },
   {
     projectphase: "create",
@@ -319,6 +338,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["leere Tabellen"],
     time: "20-30 Minuten",
     online: true,
+    medicine:"bei Sprachbarrieren schwierig",  
   },
   {
     projectphase: "create",
@@ -335,6 +355,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Whiteboard","Videokamera"],
     time: "1-3 Stunden",
     online: false,
+    medicine:"Beobachtete fühlen sich ggf. von zu vielen Beobachtern bedroht",  
   },
   {
     projectphase: "create",
@@ -352,6 +373,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Whiteboard","Stifte","Post-its"],
     time: "1-3 Stunden",
     online: true,
+    medicine:"Beachten sie ggf. Sprachbarrieren",  
   },
   {
     projectphase: "create",
@@ -369,6 +391,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Stifte", "Papier", "Klebepunkte", "Stellwände", "Nadeln oder Magnete"],
     time: "10-30 Minuten",
     online: true,
+    medicine:"folgt",  
   },
   {
     projectphase: "create",
@@ -388,6 +411,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Flipchart", "Marker", "Klebezettel"],
     time: "10-40 Minuten",
     online: true,
+    medicine:"Beachten sie ggf. Sprachbarrieren",  
   },
   {
     projectphase: "create",
@@ -405,6 +429,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Whiteboard"],
     time: "15-60 Minuten",
     online: true,
+    medicine:"folgt",  
   },
   {
     projectphase: "create",
@@ -421,6 +446,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Whiteboard", "Papier","Stift"],
     time: "10-60 Minuten",
     online: true,
+    medicine:"bei motorischen Einschränkungen von Stellvertretern erstellen lassen",  
   },
   {
     projectphase: "design",
@@ -437,6 +463,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Prototyping Tools wie Figma oder Adobe XD"],
     time: "15-60 Minuten",
     online: true,
+    medicine:"hoher Zeitaufwand für Befähigung einplanen",  
   },
   {
     projectphase: "design",
@@ -452,6 +479,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Papier", "Stift",],
     time: "1-24 Stunden",
     online: false,
+    medicine:"Beachten sie ggf. motorische Einschränkungen",  
   },
   {
     projectphase: "design",
@@ -469,6 +497,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Lego",],
     time: "variable",
     online: false,
+    medicine:"Beachten sie ggf. motorische Einschränkungen",   
   },
   {
     projectphase: "design",
@@ -485,6 +514,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Papier", "Stift", "Schere und Kleber"],
     time: "1-24 Stunden",
     online: false,
+    medicine:"Beachten sie ggf. motorische Einschränkungen",  
   },
   {
     projectphase: "design",
@@ -501,6 +531,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Computer", "Stift und Papier"],
     time: "variiert nach Anwendung",
     online: true,
+    medicine:"Zeit für Befähigung einplanen",  
   },
   {
     projectphase: "design",
@@ -518,6 +549,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Prototyping Tools oder Stift und Papier"],
     time: "variiert nach Anwendung",
     online: true,
+    medicine:"hoher Zeitaufwand für Befähigung einplanen",  
   },
   {
     projectphase: "evaluation",
@@ -534,6 +566,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Foto/Videokamera", "Tonaufnahmegerät", "Screencast Software"],
     time: "mindestens 24 Stunden",
     online: false,
+    medicine:"ggf. schwierig sich in medizinischen Zustand hineinzuversetzen",  
   },
   {
     projectphase: "evaluation",
@@ -555,6 +588,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Foto/Videokamera", "Tonaufnahmegerät", "Fragebögen"],
     time: "5 Personentage",
     online: false,
+    medicine:"ggf. Probleme beim Ethikvotum",  
   },
   {
     projectphase: "evaluation",
@@ -574,6 +608,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Fragebogen"],
     time: "1-2 Personentage",
     online: true,
+    medicine:"Testabläufe ob alle Fragen verständlich sind",  
   },
   {
     projectphase: "evaluation",
@@ -592,6 +627,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Vorlagen für Heuristische Evaluationen"],
     time: "mindestens einen Personentag",
     online: false,
+    medicine:"ggf. kein Einbezug von Laien möglich",  
   },
   {
     projectphase: "evaluation",
@@ -613,15 +649,7 @@ export const desingmethodsarray: designmethodstype[] = [
     materials: ["Vorlagen für Heuristische Evaluationen"],
     time: "5 Personentage",
     online: true,
+    medicine:"Im Laborumfeld zu starke Einflussfaktoren ausschließen",  
   },
 ];
-
-// {
-//     projectphase: "",
-//     name: "",
-//     difficulty: "",
-//     description: "",
-//     manual: [""],
-//     materials: [""],
-//     time: "",
-//   },
+ 

@@ -1,19 +1,19 @@
 "use client";
 
-import Navbar from "@/app/components/Navbar";
 import Progressbar from "@/app/components/Progressbar";
 import Image from "next/image";
 import * as left_arrow from "../../../public/images/left_arrow.svg";
 import * as right_arrow from "../../../public/images/right_arrow.svg";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { removefunction } from "@/app/utils/helperfunctions";
 import { useEffect, useState } from "react";
-import { desingmethodsarray,designmethodstype } from "@/app/utils/designmethods";
+import {
+  desingmethodsarray,
+  designmethodstype,
+} from "@/app/utils/designmethods";
 import "../../css/form.css";
 
-const Frage11 = () => {
-  const router = useRouter();
-
+const Frage11: React.FC  = () => {
   const [methods, setmethods] = useState<designmethodstype[]>([]);
   const [selectedMethods, setSelectedMethods] = useState([]);
   const [newMethods, setNewMethods] = useState(methods);
@@ -24,7 +24,9 @@ const Frage11 = () => {
     const stored = sessionStorage.getItem("methodspageten");
     console.log(
       "KREIEREN und GESTALTEN",
-      desingmethodsarray.filter(item=> item.online === false).map(item => item.name)
+      desingmethodsarray
+        .filter((item) => item.online === false)
+        .map((item) => item.name)
     );
     stored && setmethods(JSON.parse(stored));
   }, []);
@@ -47,18 +49,15 @@ const Frage11 = () => {
     setNewMethods(updatedmethods);
   }, [selectedMethods]);
 
-
-
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
-      <main className="content">
+      <div className="page">
         <Progressbar props={"90"} />
 
         <form className="form-question">
-          <h1 className="h1_question">Nennen sie die geographische Verteilung ihrer Zielgruppe?</h1>
+          <h1 className="h1_question">
+            Nennen sie die geographische Verteilung ihrer Zielgruppe?
+          </h1>
           <div className="questions">
             <label htmlFor="Innerhalb einer Stadt" className="radio_container">
               <input
@@ -78,7 +77,7 @@ const Frage11 = () => {
                 id="Innerhalb eines Landes"
                 name="frage11"
                 onChange={methodhandler}
-                value={["Guided Tour","Immersion","Peers Observing Peers"]}
+                value={["Guided Tour", "Immersion", "Peers Observing Peers"]}
                 className="old_radioinput"
               />
               <div className="custom_radio"></div>
@@ -93,7 +92,12 @@ const Frage11 = () => {
                 id="International Verteilung der Zielgruppe"
                 name="frage11"
                 onChange={methodhandler}
-                value={["Guided Tour","Immersion","Peers Observing Peers","Bodystorming"]}
+                value={[
+                  "Guided Tour",
+                  "Immersion",
+                  "Peers Observing Peers",
+                  "Bodystorming",
+                ]}
                 className="old_radioinput"
               />
               <div className="custom_radio"></div>
@@ -108,42 +112,42 @@ const Frage11 = () => {
                 id="Globale Verteilung der Zielgruppe"
                 name="frage11"
                 onChange={methodhandler}
-                value={desingmethodsarray.filter(item=> item.online === false).map(item => item.name)}
+                value={desingmethodsarray
+                  .filter((item) => item.online === false)
+                  .map((item) => item.name)}
                 className="old_radioinput"
               />
               <div className="custom_radio"></div>
               Globale Verteilung der Zielgruppe
             </label>
-
-            
-
           </div>
         </form>
 
-      
-      </main>
-      <div className="buttoncontainer">
-          <button
-            className="question_button left"
-            onClick={() => router.push("/webapplikation/frage-10")}
-          >
-            <Image src={left_arrow} height={10} width={10} alt="arrow-left" />
-            <span className="ml-2">letzte Frage</span>
-          </button>
-          <button
-            className="question_button right"
-            onClick={() => router.push("/webapplikation/frage-12")}
-          >
-            <span>nächste Frage</span>
-            <Image
-              src={right_arrow}
-              height={10}
-              width={10}
-              alt="arrow-left"
-              className="ml-2"
-            />
-          </button>
+        <div className="buttoncontainer">
+          <Link href={"/webapplikation/frage-10"}>
+            <button
+              className="question_button left"
+            >
+              <Image src={left_arrow} height={10} width={10} alt="arrow-left" />
+              <span className="ml-2">letzte Frage</span>
+            </button>
+          </Link>
+          <Link href={"/webapplikation/frage-12"}>
+            <button
+              className="question_button right"
+            >
+              <span>nächste Frage</span>
+              <Image
+                src={right_arrow}
+                height={10}
+                width={10}
+                alt="arrow-left"
+                className="ml-2"
+              />
+            </button>
+          </Link>
         </div>
+      </div>
     </>
   );
 };

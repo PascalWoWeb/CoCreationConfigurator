@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <>
       {mobileMenuSize ? (
-        <nav className="header-nav">
+        <nav className="header-nav ">
           <ul className="header-ul">
             <li>
               <Link href="/">Home</Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
           </ul>
         </nav>
       ) : (
-        <nav className="header-nav">
+        <nav className="header-nav ">
           <Image
             src="/images/mobilemenu.svg"
             width={40}

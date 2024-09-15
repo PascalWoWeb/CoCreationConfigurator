@@ -9,14 +9,9 @@ export const removefunction = (allmethods:designmethodstype[], methodoptions:str
 
 export const addfunction = (allmethods: designmethodstype[], name:string) => {
     
-  const currentmethods = desingmethodsarray.filter((item) => item.name === name)
- 
-    
+  const currentmethods = desingmethodsarray.filter((item) => item.name === name)  
   const filter = currentmethods.filter((e) => 
     !allmethods.some(element => element.name === e.name)
 );
-
         return [...allmethods, ...filter];
-  
-    
 }

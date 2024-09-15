@@ -1,14 +1,16 @@
 "use client";
 import Navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
+import "./css/home.css"
 export default function Home() {
   return (
     <>
+    <div className="page">
       <Navbar />
       <main>
         <section>
-          <h1>Planen sie ihre Co-Creation Projekte</h1>
-          <p>
+          <h1 className="h1-font-blue">Planen sie ihre Co-Creation Projekte</h1>
+          <p className="home-text">
             Bei der Planung von Co-Creation Projekten kann die Auswahl der
             geeigneten Designmethoden sich als schwierig gestalten, da diverse
             Faktoren mit in Betracht gezogen werden wie z.B. die Zielgruppe, den
@@ -21,6 +23,9 @@ export default function Home() {
           </p>
         </section>
       </main>
+      </div>
+      <Footer/>
+
     </>
   );
 }

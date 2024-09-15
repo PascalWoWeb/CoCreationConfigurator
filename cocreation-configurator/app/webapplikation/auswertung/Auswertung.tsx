@@ -14,6 +14,19 @@ const Auswertung = () => {
   const router = useRouter();
   const [methods, setmethods] = useState<designmethodstype[]>([]);
 
+  const download = () => {
+
+    const json_file = JSON.stringify(methods,null,2);
+    const blob = new Blob([json_file],{type: 'application/json'});
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href= url;
+    a.download= 'Methodenauswertung'
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
  
   useEffect(() => {
     const stored = sessionStorage.getItem("methodspagetwelve");
@@ -25,6 +38,12 @@ const Auswertung = () => {
 
   useEffect(() => {
     console.log("auswertung", methods);
+
+    console.log("understand", methods.filter((item) => item.projectphase === "understand"))
+    console.log("define", methods.filter((item) => item.projectphase === "define"))
+    console.log("create", methods.filter((item) => item.projectphase === "create"))
+    console.log("design", methods.filter((item) => item.projectphase === "design"))
+    console.log("evaluation", methods.filter((item) => item.projectphase === "evaluation"))
   }, [methods]);
  
 
@@ -33,10 +52,7 @@ const Auswertung = () => {
 
   return (
     <>
-      <div className="page">
-        <header>
-          <Navbar />
-        </header>
+ 
         <main className="summary">
           <section className="explain">
             <h1 className="h1_evaluation">
@@ -50,33 +66,76 @@ const Auswertung = () => {
               Sie erhalten mit dem Download Button ebenfalls die Möglichkeit
               ihre Auswahl lokal auf ihrem Gerät zu speichern.
             </p>
-            <button className="download-button " onClick={() => router.push('/webapplikation/frage-1')}>Download</button>
+            <button className="download-button " onClick={download}>Download</button>
           </section>
           <section className="understand">
             <h3 className="h3_categories">Projektphase: Verstehen</h3>
-            <Methodcontainer/>
-            <Methodcontainer/>
+            {
+              methods.filter((item) => item.projectphase === "understand").map((item) =>
+
+{              return(
+
+                <Methodcontainer props={item} />
+              )}
+              
+              )
+            }
+             
+ 
           </section>
           <section className="define"></section>
           <h3 className="h3_categories">Projektphase: Definieren</h3>
-          <Methodcontainer/>
-          <Methodcontainer/>
+          {
+              methods.filter((item) => item.projectphase === "define").map((item) =>
+
+{              return(
+
+                <Methodcontainer props={item} />
+              )}
+              
+              )
+            }
+ 
           <section className="create"></section>
           <h3 className="h3_categories">Projektphase: Kreieren</h3>
-          <Methodcontainer/>
-          <Methodcontainer/>
+          {
+              methods.filter((item) => item.projectphase === "create").map((item) =>
+
+{              return(
+
+                <Methodcontainer props={item} />
+              )}
+              
+              )
+            }
           <section className="design"></section>
           <h3 className="h3_categories">Projektphase: Gestalten</h3>
-          <Methodcontainer/>
-          <Methodcontainer/>
+          {
+              methods.filter((item) => item.projectphase === "design").map((item) =>
+
+{              return(
+
+                <Methodcontainer props={item} />
+              )}
+              
+              )
+            }
           <section className="evaluate">
           <h3 className="h3_categories">Projektphase: Evaluieren</h3>
-          <Methodcontainer/>
-          <Methodcontainer/>
+          {
+              methods.filter((item) => item.projectphase === "evaluation").map((item) =>
+
+{              return(
+
+                <Methodcontainer props={item} />
+              )}
+              
+              )
+            }
           </section>
         </main>
-        <Footer/>
-      </div>
+ 
+    
     </>
   );
 };

@@ -1,0 +1,21 @@
+.page {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-top: 15%;
+  align-items: center;
+}
+
+section {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.h1-font-blue {
+  color: #4e65d9;
+  font-weight: 700;
+}
+
+.home-text{
+    margin-top: 5%;
+}

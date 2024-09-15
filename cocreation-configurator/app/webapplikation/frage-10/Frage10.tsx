@@ -1,19 +1,19 @@
 "use client";
 
-import Navbar from "@/app/components/Navbar";
 import Progressbar from "@/app/components/Progressbar";
 import Image from "next/image";
 import * as left_arrow from "../../../public/images/left_arrow.svg";
 import * as right_arrow from "../../../public/images/right_arrow.svg";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { removefunction } from "@/app/utils/helperfunctions";
 import { useEffect, useState } from "react";
-import { desingmethodsarray,designmethodstype } from "@/app/utils/designmethods";
+import {
+  desingmethodsarray,
+  designmethodstype,
+} from "@/app/utils/designmethods";
 import "../../css/form.css";
 
-const Frage10 = () => {
-  const router = useRouter();
-
+const Frage10: React.FC  = () => {
   const [methods, setmethods] = useState<designmethodstype[]>([]);
   const [selectedMethods, setSelectedMethods] = useState([]);
   const [newMethods, setNewMethods] = useState(methods);
@@ -49,84 +49,91 @@ const Frage10 = () => {
 
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
-      <main className="content">
-        <Progressbar props={"81"} />
+      <div className="page">
+          <Progressbar props={"81"} />
 
-        <form className="form-question">
-          <h1 className="h1_question">Wie detailliert soll die Datenauswertung aussehen?</h1>
-          <div className="questions">
-            <label htmlFor="Qualitative Datenauswertung" className="radio_container">
-              <input
-                type="radio"
-                id="Qualitative Datenauswertung"
-                name="frage10"
-                onChange={methodhandler}
-                value={["Dotmocracy","Fragebogen","Mindmapping","Feldtest"]}
-                className="old_radioinput"
-              />
-              <div className="custom_radio"></div>
-              Qualitative Datenauswertung (auf persönlicher Ebene)
-            </label>
-            <label htmlFor="Quantitativ" className="radio_container">
-              <input
-                type="radio"
-                id="Quantitativ"
-                name="frage10"
-                onChange={methodhandler}
-                value={["Interview","Experten Interviews","Group Interviews","Personas","User Journey Map","Storyboard"]}
-                className="old_radioinput"
-              />
-              <div className="custom_radio"></div>
-              Quantitativ (Datenauswertung auf Grundlage von Statistiken)
-            </label>
-            <label
-              htmlFor="Mixed Methods"
-              className="radio_container"
+          <form className="form-question">
+            <h1 className="h1_question">
+              Wie detailliert soll die Datenauswertung aussehen?
+            </h1>
+            <div className="questions">
+              <label
+                htmlFor="Qualitative Datenauswertung"
+                className="radio_container"
+              >
+                <input
+                  type="radio"
+                  id="Qualitative Datenauswertung"
+                  name="frage10"
+                  onChange={methodhandler}
+                  value={[
+                    "Dotmocracy",
+                    "Fragebogen",
+                    "Mindmapping",
+                    "Feldtest",
+                  ]}
+                  className="old_radioinput"
+                />
+                <div className="custom_radio"></div>
+                Qualitative Datenauswertung (auf persönlicher Ebene)
+              </label>
+              <label htmlFor="Quantitativ" className="radio_container">
+                <input
+                  type="radio"
+                  id="Quantitativ"
+                  name="frage10"
+                  onChange={methodhandler}
+                  value={[
+                    "Interview",
+                    "Experten Interviews",
+                    "Group Interviews",
+                    "Personas",
+                    "User Journey Map",
+                    "Storyboard",
+                  ]}
+                  className="old_radioinput"
+                />
+                <div className="custom_radio"></div>
+                Quantitativ (Datenauswertung auf Grundlage von Statistiken)
+              </label>
+              <label htmlFor="Mixed Methods" className="radio_container">
+                <input
+                  type="radio"
+                  id="Mixed Methods"
+                  name="frage10"
+                  onChange={methodhandler}
+                  value={[]}
+                  className="old_radioinput"
+                />
+                <div className="custom_radio"></div>
+                Mixed Methods (Eine Mischung aus Qualitativer und Quantitativer
+                Auswertung)
+              </label>
+            </div>
+          </form>
+        <div className="buttoncontainer">
+          <Link href={"/webapplikation/frage-9"}>
+            <button className="question_button left">
+              <Image src={left_arrow} height={10} width={10} alt="arrow-left" />
+              <span className="ml-2">letzte Frage</span>
+            </button>
+          </Link>
+          <Link href={"/webapplikation/frage-11"}>
+            <button
+              className="question_button right"
             >
-              <input
-                type="radio"
-                id="Mixed Methods"
-                name="frage10"
-                onChange={methodhandler}
-                value={[]}
-                className="old_radioinput"
+              <span>nächste Frage</span>
+              <Image
+                src={right_arrow}
+                height={10}
+                width={10}
+                alt="arrow-left"
+                className="ml-2"
               />
-              <div className="custom_radio"></div>
-              Mixed Methods (Eine Mischung aus Qualitativer und Quantitativer Auswertung)
-            </label>
-          
-            
-
-          </div>
-        </form>
-
-      
-      </main>
-      <div className="buttoncontainer">
-          <button
-            className="question_button left"
-            onClick={() => router.push("/webapplikation/frage-9")}
-          >
-            <Image src={left_arrow} height={10} width={10} alt="arrow-left" />
-            <span className="ml-2">letzte Frage</span>
-          </button>
-          <button
-            className="question_button right"
-            onClick={() => router.push("/webapplikation/frage-11")}
-          >
-            <span>nächste Frage</span>
-            <Image
-              src={right_arrow}
-              height={10}
-              width={10}
-              alt="arrow-left"
-              className="ml-2"
-            />
-          </button>
+            </button>
+          </Link>
         </div>
+      </div>
     </>
   );
 };

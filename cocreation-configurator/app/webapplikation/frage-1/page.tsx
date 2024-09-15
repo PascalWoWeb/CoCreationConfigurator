@@ -1,10 +1,11 @@
 import Frage1 from "./Frage1";
 import { Metadata } from "next";
+import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: 'Frage1',
-  description: '...',
+  title: 'Co-Creation - Hauptziel des Projektes',
+  description: "Der Co-Creation Konfigurator bietet ihnen die Möglichekeit ihr Co-Creation Projekt ohne Vorwissen zu realisieren",
 }
 const Page = () => {
 

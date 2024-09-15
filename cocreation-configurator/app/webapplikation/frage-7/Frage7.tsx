@@ -1,19 +1,16 @@
 "use client";
-
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
+ 
 import Progressbar from "@/app/components/Progressbar";
 import Image from "next/image";
 import * as left_arrow from "../../../public/images/left_arrow.svg";
 import * as right_arrow from "../../../public/images/right_arrow.svg";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { addfunction } from "@/app/utils/helperfunctions";
 import { useEffect, useState } from "react";
 import { desingmethodsarray,designmethodstype } from "@/app/utils/designmethods";
 import "../../css/form.css";
 
-const Frage7 = () => {
-  const router = useRouter();
+const Frage7: React.FC  = () => {
 
   
   const [methods, setmethods] = useState<designmethodstype[]>([]);
@@ -59,9 +56,7 @@ const Frage7 = () => {
   return (
     <>
       <div className="page">
-        <header>
-          <Navbar />
-        </header>
+         
         <main className="content">
           <Progressbar props={"54"} />
 
@@ -108,18 +103,19 @@ const Frage7 = () => {
               </label>
             </div>
           </form>
-        </main>
-        <div className="buttoncontainer">
+          <div className="buttoncontainer">
+            <Link href={"/webapplikation/frage-6"}>
           <button
             className="question_button left"
-            onClick={() => router.push("/webapplikation/frage-6")}
+ 
           >
             <Image src={left_arrow} height={10} width={10} alt="arrow-left" />
             <span className="ml-2">letzte Frage</span>
-          </button>
+          </button></Link>
+          <Link href={"/webapplikation/frage-8"}>
           <button
             className="question_button right"
-            onClick={() => router.push("/webapplikation/frage-8")}
+         
           >
             <span>nächste Frage</span>
             <Image
@@ -129,10 +125,13 @@ const Frage7 = () => {
               alt="arrow-left"
               className="ml-2"
             />
-          </button>
+          </button></Link>
         </div>
-        <Footer />
-      </div>
+        </main>
+       
+        </div>
+ 
+   
    
     </>
   );

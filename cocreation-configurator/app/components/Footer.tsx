@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <>
       {mobileMenuSize && (
-        <footer className="footer-container">
+        <footer className="footer-container  ">
           <ul className="footer-ul">
             <li>
               <Link href="/">Impressum</Link>
