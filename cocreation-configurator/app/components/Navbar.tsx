@@ -5,8 +5,10 @@ import Image from "next/image";
 import "../css/header.css";
 
 const Navbar = () => {
+
+  const minwidth = window.innerWidth >= 768;
   const [mobileMenuSize, setmobileMenuSize] = useState(
-    window.innerWidth >= 768
+    minwidth
   );
   const [openMobile, setOpenMobile] = useState(false);
 
@@ -16,7 +18,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const resizemenu = () => {
-      setmobileMenuSize(window.innerWidth >= 768);
+      setmobileMenuSize(minwidth);
     };
 
     window.addEventListener("resize", resizemenu);

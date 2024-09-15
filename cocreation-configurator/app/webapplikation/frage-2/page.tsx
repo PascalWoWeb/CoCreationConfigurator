@@ -10,7 +10,7 @@ const Page = () => {
 
   return(
     <>
-    <Frage2/>
+    <Frage2 key={"Frage2"}/>
     </>
 
   )

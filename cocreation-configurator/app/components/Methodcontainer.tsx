@@ -12,14 +12,14 @@ const Methodcontainer = (props:any) => {
 
  const [visible, setIsVisible] = useState(false)
 
- console.log("PROPS", props.props)
+ 
  
  const showmethod = () => {
   setIsVisible(!visible)
  }
   return (
     <>
-    <div className="outer_container">
+    <div key={props.props.name} className="outer_container">
       <div className="menu_item">
       <Image src={triangle} height={25} width={25} alt="trigangle" className={`triangle ${visible ? "" : "open"}`} onClick={showmethod}/>
       <h2 className="menu_item_text">{props.props.name}</h2>
@@ -43,7 +43,7 @@ const Methodcontainer = (props:any) => {
           {
             props.props.manual.map((item:string) =>
             {
-              return(<li>{item}</li>)
+              return(<li key={item}>{item}</li>)
             }
             )
           }

@@ -1,12 +1,11 @@
 "use client";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import "./css/home.css"
 export default function Home() {
   return (
     <>
     <div className="page">
-      <Navbar />
+
       <main>
         <section>
           <h1 className="h1-font-blue">Planen sie ihre Co-Creation Projekte</h1>
@@ -24,7 +23,6 @@ export default function Home() {
         </section>
       </main>
       </div>
-      <Footer/>
 
     </>
   );

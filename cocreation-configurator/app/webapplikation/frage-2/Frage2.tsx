@@ -7,7 +7,8 @@ import Image from "next/image";
 import * as left_arrow from "../../../public/images/left_arrow.svg";
 import * as right_arrow from "../../../public/images/right_arrow.svg";
 import { removefunction } from "@/app/utils/helperfunctions";
-import Link from "next/link";
+import { useRouter } from "next/navigation"; 
+import Link from "next/link"
 import "../../css/form.css";
 import { useEffect, useState } from "react";
 import {
@@ -16,12 +17,14 @@ import {
 } from "@/app/utils/designmethods";
 
 const Frage2: React.FC  = () => {
+
   const [methods, setmethods] = useState<designmethodstype[]>([]);
   const [selectedMethods, setSelectedMethods] = useState([]);
   const [newMethods, setNewMethods] = useState(methods);
   const methodhandler = (event: any) => {
     setSelectedMethods(event.target.value);
   };
+  const router = useRouter();
   useEffect(() => {
     const stored = sessionStorage.getItem("methods");
 
@@ -30,18 +33,14 @@ const Frage2: React.FC  = () => {
 
   useEffect(() => {
     sessionStorage.setItem("methodspagetwo", JSON.stringify(newMethods));
-    console.log("NEW", newMethods);
+ 
   }, [newMethods]);
 
-  useEffect(() => {
-    console.log("FRAGE2", methods);
-  }, [methods]);
+ 
 
   useEffect(() => {
-    console.log("BEFORE", methods);
-
-    console.log("SELECTED", selectedMethods);
-
+ 
+  
     let updatedmethods = removefunction(methods, selectedMethods);
     setNewMethods(updatedmethods);
   }, [selectedMethods]);
@@ -110,8 +109,8 @@ const Frage2: React.FC  = () => {
               <span className="ml-2">letzte Frage</span>
             </button>
           </Link>
-          <Link href={"/webapplikation/frage-3"}>
-            <button className="question_button right">
+       
+            <button className="question_button right" onClick={() => router.push("/webapplikation/frage-3")}>
               <span>nächste Frage</span>
               <Image
                 src={right_arrow}
@@ -121,7 +120,7 @@ const Frage2: React.FC  = () => {
                 className="ml-2"
               />
             </button>
-          </Link>
+  
         </div>
       </div>
     </>

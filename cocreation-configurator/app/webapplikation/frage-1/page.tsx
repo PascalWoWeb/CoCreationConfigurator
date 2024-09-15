@@ -11,7 +11,7 @@ const Page = () => {
 
   return(
     <>
-    <Frage1/>
+    <Frage1 key={"Frage1"}/>
     </>
 
   )

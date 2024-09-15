@@ -71,11 +71,11 @@ const Auswertung = () => {
           <section className="understand">
             <h3 className="h3_categories">Projektphase: Verstehen</h3>
             {
-              methods.filter((item) => item.projectphase === "understand").map((item) =>
+              methods.filter((item) => item.projectphase === "understand").map((item,index) =>
 
 {              return(
 
-                <Methodcontainer props={item} />
+                <Methodcontainer key={index} props={item} />
               )}
               
               )
@@ -86,11 +86,11 @@ const Auswertung = () => {
           <section className="define"></section>
           <h3 className="h3_categories">Projektphase: Definieren</h3>
           {
-              methods.filter((item) => item.projectphase === "define").map((item) =>
+              methods.filter((item) => item.projectphase === "define").map((item,index) =>
 
 {              return(
 
-                <Methodcontainer props={item} />
+                <Methodcontainer key={index} props={item} />
               )}
               
               )
@@ -99,11 +99,11 @@ const Auswertung = () => {
           <section className="create"></section>
           <h3 className="h3_categories">Projektphase: Kreieren</h3>
           {
-              methods.filter((item) => item.projectphase === "create").map((item) =>
+              methods.filter((item) => item.projectphase === "create").map((item,index) =>
 
 {              return(
 
-                <Methodcontainer props={item} />
+                <Methodcontainer key={index} props={item} />
               )}
               
               )
@@ -111,11 +111,11 @@ const Auswertung = () => {
           <section className="design"></section>
           <h3 className="h3_categories">Projektphase: Gestalten</h3>
           {
-              methods.filter((item) => item.projectphase === "design").map((item) =>
+              methods.filter((item) => item.projectphase === "design").map((item,index) =>
 
 {              return(
 
-                <Methodcontainer props={item} />
+                <Methodcontainer key={index} props={item} />
               )}
               
               )
@@ -123,11 +123,11 @@ const Auswertung = () => {
           <section className="evaluate">
           <h3 className="h3_categories">Projektphase: Evaluieren</h3>
           {
-              methods.filter((item) => item.projectphase === "evaluation").map((item) =>
+              methods.filter((item) => item.projectphase === "evaluation").map((item, index) =>
 
 {              return(
 
-                <Methodcontainer props={item} />
+                <Methodcontainer key={index} props={item} />
               )}
               
               )

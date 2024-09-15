@@ -6,6 +6,7 @@ import * as left_arrow from "../../../public/images/left_arrow.svg";
 import * as right_arrow from "../../../public/images/right_arrow.svg";
 import { removefunction } from "@/app/utils/helperfunctions";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import "../../css/form.css";
 import { useEffect, useState } from "react";
 import {
@@ -18,10 +19,6 @@ const Frage1: React.FC = () => {
   const [newMethods, setNewMethods] = useState(desingmethodsarray);
 
   useEffect(() => {
-    console.log("BEFORE", desingmethodsarray);
-
-    console.log("SELECTED", selectedMethods);
-
     let updatedmethods = removefunction(desingmethodsarray, selectedMethods);
     setNewMethods(updatedmethods);
   }, [selectedMethods]);
@@ -32,7 +29,6 @@ const Frage1: React.FC = () => {
 
   useEffect(() => {
     sessionStorage.setItem("methods", JSON.stringify(newMethods));
-    console.log("NEW", newMethods);
   }, [newMethods]);
 
   return (

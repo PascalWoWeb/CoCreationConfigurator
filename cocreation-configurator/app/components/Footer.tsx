@@ -5,14 +5,15 @@ import "../css/header.css";
 import "../css/footer.css";
 
 const Footer = () => {
+  const minwidth = window.innerWidth >= 768;
   const [mobileMenuSize, setmobileMenuSize] = useState(
-    window.innerWidth >= 768
+    minwidth
   );
  
 
   useEffect(() => {
     const resizemenu = () => {
-      setmobileMenuSize(window.innerWidth >= 768);
+      setmobileMenuSize(minwidth);
     };
 
     window.addEventListener("resize", resizemenu);

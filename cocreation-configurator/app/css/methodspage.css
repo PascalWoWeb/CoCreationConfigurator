@@ -1,9 +1,16 @@
  
+
+
 .grid-container{
-    height: 100vh;
+    min-height: inherit;
     display: grid;
     justify-content: center;
-    align-items: center;
  
+    margin-top: 20%;
+ 
+    grid-template-columns:  15% 15% 15% 15%;
+ 
+    gap: 5%;
+   
   
 }
