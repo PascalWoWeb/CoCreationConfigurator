@@ -7,6 +7,8 @@ import Image from "next/image";
 import * as left_arrow from "../../../public/images/left_arrow.svg";
 import * as right_arrow from "../../../public/images/right_arrow.svg";
 import { removefunction } from "@/app/utils/helperfunctions";
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from "next/navigation"; 
 import Link from "next/link"
 import "../../css/form.css";
@@ -21,8 +23,10 @@ const Frage2: React.FC  = () => {
   const [methods, setmethods] = useState<designmethodstype[]>([]);
   const [selectedMethods, setSelectedMethods] = useState([]);
   const [newMethods, setNewMethods] = useState(methods);
+  const [errorState, setErrorState]= useState(true)
   const methodhandler = (event: any) => {
     setSelectedMethods(event.target.value);
+    setErrorState(false)
   };
   const router = useRouter();
   useEffect(() => {
@@ -30,6 +34,12 @@ const Frage2: React.FC  = () => {
 
     stored && setmethods(JSON.parse(stored));
   }, []);
+
+  const nextquestion = () => {
+
+    errorState ? toast.error("Wählen sie eine Option aus") : router.push("/co-creation-konfigurator/frage-3") 
+  
+  }
 
   useEffect(() => {
     sessionStorage.setItem("methodspagetwo", JSON.stringify(newMethods));
@@ -110,7 +120,7 @@ const Frage2: React.FC  = () => {
             </button>
           </Link>
        
-            <button className="question_button right" onClick={() => router.push("/co-creation-konfigurator/frage-3")}>
+            <button className="question_button right" onClick={nextquestion}>
               <span>nächste Frage</span>
               <Image
                 src={right_arrow}
@@ -120,6 +130,7 @@ const Frage2: React.FC  = () => {
                 className="ml-2"
               />
             </button>
+            <ToastContainer/>
   
         </div>
      

@@ -42,16 +42,19 @@ export default function Home() {
               Reiter Methoden über andere mögliche Methoden informieren.
             </p>
           </section>
-          <section>
+          <section className="section_end"> 
             <h2 className="h2-font-blue">Wieso Co-Creation ?</h2>
-            <p className="home-text">
-              Dieses Co-Creation Webtool richtet sich an Personen, welche ohne
-              Vorwissen ein Co-Creation Projekt im Bereich E-Health planen
-              möchten. Durch die automatische Auswahl der Designmethoden, können
-              sie maßgeschneiderte Co-Creation Projekte planen, ohne zu viel
-              Zeit in die Recherche der geeigneten Methoden zu stecken.Neben der
-              Vorgeschlagenen Methoden können sie sich zudem noch über dem
-              Reiter Methoden über andere mögliche Methoden informieren.
+            <p className="home-text ">
+              Co-Creation bietet ihnen die Möglichkeite ihre Interessensgruppen
+              mit in den Entwicklungsprozess miteinzubeziehen. Dies bringt
+              diverse Vorteile mit sich, da sie den Fokus nicht auf technischen
+              Innovationen, sondern auf die Bedürfnisse der Endnutzer setzen.
+              Durch den gemeinsamen Entwicklungsprozess erfahren sie mehr über
+              die Bedürfnisse ihrerer Interessensgruppen und sorgen für eine
+              stärkere Bindung zum Unternehmen. Zudem werden ihre E-Health
+              Anwendungen und Produkte nutzerfreundlicher, sie vermeiden
+              Entwicklungszeit für unnötige Funktionen und sichern, dass die
+              Zielgruppe ihrem Produkt gegenüber ein hohen Engagement aufweisen.
             </p>
           </section>
         </main>

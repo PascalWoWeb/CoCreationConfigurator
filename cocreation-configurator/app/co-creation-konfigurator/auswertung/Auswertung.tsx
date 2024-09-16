@@ -50,7 +50,7 @@ const Auswertung = () => {
 
   return (
     <>
- 
+  <div>
         <main className="summary">
           <section className="explain">
             <h1 className="h1_evaluation">
@@ -132,7 +132,7 @@ const Auswertung = () => {
             }
           </section>
         </main>
- 
+        </div>
     
     </>
   );

@@ -6,6 +6,8 @@ import * as left_arrow from "../../../public/images/left_arrow.svg";
 import * as right_arrow from "../../../public/images/right_arrow.svg";
 import { removefunction } from "@/app/utils/helperfunctions";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/navigation";
 import "../../css/form.css";
 import { useEffect, useState } from "react";
@@ -15,8 +17,10 @@ import {
 } from "@/app/utils/designmethods";
 
 const Frage1: React.FC = () => {
+  const router = useRouter();
   const [selectedMethods, setSelectedMethods] = useState([]);
   const [newMethods, setNewMethods] = useState(desingmethodsarray);
+  const [errorState, setErrorState] = useState(true);
 
   useEffect(() => {
     let updatedmethods = removefunction(desingmethodsarray, selectedMethods);
@@ -25,11 +29,18 @@ const Frage1: React.FC = () => {
 
   const methodhandler = (event: any) => {
     setSelectedMethods(event.target.value);
+    setErrorState(false);
   };
 
   useEffect(() => {
     sessionStorage.setItem("methods", JSON.stringify(newMethods));
   }, [newMethods]);
+
+  const nextquestion = () => {
+    errorState
+      ? toast.error("Wählen sie eine Option aus")
+      : router.push("/co-creation-konfigurator/frage-2");
+  };
 
   return (
     <>
@@ -100,22 +111,24 @@ const Frage1: React.FC = () => {
       </form>
 
       <div className="buttoncontainer">
-        <button className="question_button left">
-          <Image src={left_arrow} height={10} width={10} alt="arrow-left" />
-          <span className="ml-2">letzte Frage</span>
-        </button>
-        <Link href="/co-creation-konfigurator/frage-2">
-          <button className="question_button right">
-            nächste Frage
-            <Image
-              src={right_arrow}
-              height={10}
-              width={10}
-              alt="arrow-left"
-              className="ml-2"
-            />
+        <Link href={"/co-creation-konfigurator"}>
+          <button className="question_button left">
+            <Image src={left_arrow} height={10} width={10} alt="arrow-left" />
+            <span className="ml-2">Zurück zum</span>
           </button>
         </Link>
+
+        <button className="question_button right" onClick={nextquestion}>
+          nächste Frage
+          <Image
+            src={right_arrow}
+            height={10}
+            width={10}
+            alt="arrow-left"
+            className="ml-2"
+          />
+        </button>
+        <ToastContainer />
       </div>
     </>
   );

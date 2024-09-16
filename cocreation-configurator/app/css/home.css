@@ -25,3 +25,10 @@ section {
 .home-text{
     margin-top: 5%;
 }
+p{
+  color: #707070;
+}
+
+.section_end{
+  margin-bottom: 10%;
+}

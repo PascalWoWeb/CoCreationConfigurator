@@ -7,6 +7,9 @@ import Image from "next/image";
 import * as left_arrow from "../../../public/images/left_arrow.svg";
 import * as right_arrow from "../../../public/images/right_arrow.svg";
 import Link from "next/link";
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from "next/navigation";
 import { removefunction } from "@/app/utils/helperfunctions";
 import { useEffect, useState } from "react";
 import {
@@ -16,38 +19,36 @@ import {
 import "../../css/form.css";
 
 const Frage5: React.FC  = () => {
+  const router = useRouter();
   const [methods, setmethods] = useState<designmethodstype[]>([]);
   const [selectedMethods, setSelectedMethods] = useState([]);
   const [newMethods, setNewMethods] = useState(methods);
+  const [errorState, setErrorState]= useState(true)
   const methodhandler = (event: any) => {
     setSelectedMethods(event.target.value);
+    setErrorState(false)
   };
   useEffect(() => {
     const stored = sessionStorage.getItem("methodspagefour");
-    console.log(
-      "KREIEREN und GESTALTEN",
-      desingmethodsarray.filter((item) => item.projectphase === "design")
-    );
     stored && setmethods(JSON.parse(stored));
   }, []);
 
   useEffect(() => {
     sessionStorage.setItem("methodspagefive", JSON.stringify(newMethods));
-    console.log("NEW", newMethods);
   }, [newMethods]);
 
-  useEffect(() => {
-    console.log("FRAGE5", methods);
-  }, [methods]);
 
   useEffect(() => {
-    console.log("BEFORE", methods);
-
-    console.log("SELECTED", selectedMethods);
-
     let updatedmethods = removefunction(methods, selectedMethods);
     setNewMethods(updatedmethods);
   }, [selectedMethods]);
+
+  const nextquestion = () => {
+
+    errorState ? toast.error("Wählen sie eine Option aus") : router.push("/co-creation-konfigurator/frage-6") 
+  
+  }
+  
 
   return (
     <>
@@ -136,8 +137,7 @@ const Frage5: React.FC  = () => {
               <span className="ml-2">letzte Frage</span>
             </button>
           </Link>
-          <Link href={"/co-creation-konfigurator/frage-6"}>
-            <button className="question_button right">
+            <button className="question_button right" onClick={nextquestion}>
               <span>nächste Frage</span>
               <Image
                 src={right_arrow}
@@ -147,7 +147,7 @@ const Frage5: React.FC  = () => {
                 className="ml-2"
               />
             </button>
-          </Link>
+            <ToastContainer/>
         </div>
  
     </>

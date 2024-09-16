@@ -28,7 +28,7 @@ const Footer = () => {
               <Link href="/">Impressum</Link>
             </li>
             <li>
-              <Link href="/webapplikation">Datenschutz</Link>
+              <Link href="//">Datenschutz</Link>
             </li>
  
           </ul>

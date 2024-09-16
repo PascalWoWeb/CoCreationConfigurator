@@ -4,7 +4,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const Method: React.FC = (props:any) => {
+const Method  = (props:any) => {
   const [openModal, setOpenModal] = useState(false);
 
   const open_modal = () => {
@@ -31,7 +31,7 @@ const Method: React.FC = (props:any) => {
       </div>
 
       {openModal && (
-        <div className="modal_inner">
+        <div className="modal_inner  ">
             <div className="close_icon">
             <p className="title">{props.props.name}</p>
             <Image src={"/images/close_icon.svg"} alt="closeicon" width={20} height={20} onClick={close_modal}/>

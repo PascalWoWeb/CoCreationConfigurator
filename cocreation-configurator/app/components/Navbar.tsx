@@ -10,15 +10,15 @@ const Navbar = () => {
   const [openMobile, setOpenMobile] = useState(false);
 
   useEffect(() => {
-    const updateMenuSize = () => {
+    const MenuSize = () => {
       setMobileMenuSize(window.innerWidth >= 768);
     };
 
-    updateMenuSize();  
-    window.addEventListener("resize", updateMenuSize);
+    MenuSize();  
+    window.addEventListener("resize", MenuSize);
 
     return () => {
-      window.removeEventListener("resize", updateMenuSize);
+      window.removeEventListener("resize", MenuSize);
     };
   }, []);
 
