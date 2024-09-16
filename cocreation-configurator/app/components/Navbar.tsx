@@ -59,7 +59,7 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/webapplikation">Web Applikation</Link>
+                <Link href="/co-creation-konfigurator">Co-Creation Konfigurator</Link>
               </li>
               <li>
                 <Link href="/methoden">Methoden</Link>
